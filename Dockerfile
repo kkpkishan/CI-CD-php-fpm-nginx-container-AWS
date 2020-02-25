@@ -1,5 +1,5 @@
 FROM php:7.0-fpm
-MAINTAINER Khatrani Kishan  <support17@electromech.info>
+MAINTAINER Khatrani Kishan  <kkpkishan@gmail.com>
 RUN apt-get update -y
 RUN apt-get install net-tools -y
 RUN apt-get install nginx -y
