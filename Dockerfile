@@ -33,7 +33,7 @@ COPY ./source/ /code/
 COPY ./docker_data/supervisord.conf /etc/supervisor.conf
 
 
-RUN composer install
+#RUN composer install
 
 RUN rm -f /usr/local/etc/php/php.ini*
 RUN rm -f /usr/local/etc/php-fpm.conf.default
