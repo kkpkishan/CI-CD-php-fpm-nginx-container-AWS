@@ -5,7 +5,7 @@ phases:
     commands: 
       - echo Logging in to Amazon ECR... 
       - aws --version 
-      - REPOSITORY_URI=$ECR 
+      - REPOSITORY_URI=<URL> 
       - echo -n "$CODEBUILD_BUILD_ID" | sed "s/.*:\([[:xdigit:]]\{7\}\).*/\1/" > /tmp/build_id.out 
       - printf "%s:%s" "$REPOSITORY_URI" "$(cat /tmp/build_id.out)" > /tmp/build_tag.out 
       - printf '[{"name":"<Container Name>","imageUri":"%s"}]' "$(cat /tmp/build_tag.out)" > imagedefinitions.json 
